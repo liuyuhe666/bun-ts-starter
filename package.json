@@ -1,0 +1,61 @@
+{
+  "name": "bun-ts-starter",
+  "type": "module",
+  "private": true,
+  "author": {
+    "name": "LiuYuhe",
+    "url": "https://liuyuhe666.github.io",
+    "email": "cnliuyuhe@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/liuyuhe666/bun-ts-starter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyuhe666/bun-ts-starter.git"
+  },
+  "bugs": "https://github.com/liuyuhe666/bun-ts-starter/issues",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bunchee",
+    "dev": "bunchee --watch",
+    "prepare": "simple-git-hooks",
+    "test": "vitest",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bunchee": "^6.9.4",
+    "eslint": "^10.0.3",
+    "eslint-config-hyoban": "^7.0.3",
+    "lint-staged": "^16.4.0",
+    "simple-git-hooks": "^2.13.1",
+    "vitest": "^4.1.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "bunx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
