@@ -1,7 +1,9 @@
 {
   "name": "bun-ts-starter",
   "type": "module",
+  "version": "0.0.0",
   "private": true,
+  "description": "",
   "author": {
     "name": "LiuYuhe",
     "url": "https://liuyuhe666.github.io",
@@ -14,6 +16,8 @@
     "url": "git+https://github.com/liuyuhe666/bun-ts-starter.git"
   },
   "bugs": "https://github.com/liuyuhe666/bun-ts-starter/issues",
+  "keywords": [],
+  "sideEffects": false,
   "exports": {
     ".": {
       "import": {
